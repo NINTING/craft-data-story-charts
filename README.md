@@ -2,44 +2,112 @@
 
 # Craft Data Story Charts
 
-**Turn raw business data into clear, elegant, decision-ready explanatory charts.**
+**A complete, software-agnostic method for turning an established data finding into audience understanding, a decision, or action.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-172B4D.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-246BFD.svg)](https://agentskills.io)
-[![skills.sh](https://skills.sh/b/NINTING/craft-data-story-charts)](https://skills.sh/NINTING/craft-data-story-charts)
+[![skills.sh](https://img.shields.io/badge/skills.sh-install-246BFD.svg)](https://skills.sh/NINTING/craft-data-story-charts)
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [Gallery](#gallery) · [Skill instructions](skills/craft-data-story-charts/SKILL.md)
+[English](README.md) · [简体中文](README.zh-CN.md) · [Gallery](#gallery) · [Skill](skills/craft-data-story-charts/SKILL.md)
 
 </div>
 
 ![Highlighted operations trend showing a decision-ready data story](examples/04-highlighted-line-delivery.png)
 
-## Why this Skill exists
+## One transformation, not a chart cookbook
 
-Most charting tools can draw marks. They do not decide what an audience should understand, which comparison matters, what should be emphasized, or whether the result is ready to drive a decision.
+Chart software can draw marks. It cannot decide what this audience needs to understand, which evidence is sufficient, where attention should go, how text and visuals should work together, or what response the communication should produce.
 
-`craft-data-story-charts` gives an AI agent a software-agnostic workflow for turning data into an explanatory visual:
+This Skill carries one intent through the complete data-story process:
 
-> **Audience → decision → comparison → Big Idea → chart → visual hierarchy → rendered inspection → quality gate**
+```text
+analysis result
+→ audience and desired response
+→ central message and evidence
+→ visual encoding
+→ reduced cognitive load
+→ directed attention
+→ usable design
+→ narrative sequence
+→ rendered audience-tested result
+```
 
-The Skill works with any capable rendering stack. It does not prescribe Matplotlib, D3, ECharts, Vega, Excel, Tableau, Power BI, or a particular programming language.
+Chart types, color, typography, labels, fills, shading, borders, annotations, animation, and layout are not isolated tips. Each is selected at the stage where it advances that same communication intent.
 
-## What it changes
+The Skill is independent of Matplotlib, D3, ECharts, Vega, Excel, Tableau, Power BI, and any programming language.
 
-Without a communication method, agents often produce a generic title, default colors, a remote legend, too many labels, and no clear answer to “so what?” This Skill requires the agent to:
+## What the Skill makes an agent do
 
-- identify a specific audience and business use;
-- separate exploratory analysis from the explanatory result;
-- write one decision-relevant Big Idea before drawing;
-- select the display from the comparison task, not the software default;
-- use a conclusion title and direct annotations;
-- keep context visible but visually subordinate;
-- render the actual artifact instead of returning code only;
-- pass a hard-failure checklist and a scored quality gate before delivery.
+- separate exploratory analysis from an explanatory result;
+- define the audience, desired response, medium, prior knowledge, and concerns;
+- compress the result into a three-minute story and one central message;
+- select only necessary evidence, context, uncertainty, and contrary evidence;
+- choose the display from the comparison—not a software default;
+- remove clutter, weaken context, and emphasize only the message-bearing evidence;
+- construct a deliberate first, second, and third visual stop;
+- treat text, reading path, color, fill, shading, spacing, and accessibility as part of the visualization;
+- structure a beginning, middle, and end and adapt it for live or self-contained delivery;
+- render the real artifact, test audience comprehension, and revise the earliest faulty stage.
+
+## Install
+
+```bash
+npx skills add NINTING/craft-data-story-charts
+```
+
+For manual Codex installation, copy `skills/craft-data-story-charts` to:
+
+```text
+~/.codex/skills/craft-data-story-charts/
+```
+
+On Windows, this is normally `%USERPROFILE%\.codex\skills\craft-data-story-charts\`.
+
+## Use
+
+```text
+Use $craft-data-story-charts with this established analysis result.
+
+Audience: CFO and operating leads.
+Desired response: decide which intervention receives next-quarter funding.
+Medium: a self-contained executive slide.
+Create one explanatory chart. Preserve uncertainty and contrary evidence,
+render the final artifact, and apply the Skill's complete quality gate.
+```
+
+If the finding is not established, the Skill first keeps the work exploratory and avoids visually promoting an untested hypothesis into a conclusion.
+
+## Complete method
+
+| Stage | Question answered | Main techniques |
+|---|---|---|
+| 1. Exploration or explanation | Is the result established? | preserve alternatives; retain decision-changing evidence |
+| 2. Context | Who needs what, how, and why? | audience, response, relationship, medium, tone, success |
+| 3. Central message | What is the one complete point? | three-minute story, central sentence, storyboard |
+| 4. Evidence and display | What must the audience compare? | evidence classification, honest encoding, nearest alternative |
+| 5. Cognitive load | What can disappear or recede? | Gestalt, direct labels, remove → weaken → emphasize |
+| 6. Attention | What should be noticed first, second, third? | position, contrast, size, weight, restrained accent |
+| 7. Design | Can the audience use and accept it? | affordance, text, accessibility, aesthetics, acceptance |
+| 8. Story and medium | In what order should understanding unfold? | beginning–middle–end, title spine, vertical logic, live vs written |
+| 9. Render and iterate | Did the actual audience receive the intended message? | rendered inspection, retelling, value trace, upstream revision |
+
+The maintained [Data Story Brief](skills/craft-data-story-charts/SKILL.md) prevents these stages from becoming disconnected checklists.
+
+## Visual coverage
+
+The references cover:
+
+- simple text, tables, heatmaps, scatterplots, lines, slopes, bars, stacked and 100% stacked bars;
+- diverging and positive/negative contribution stacks, waterfalls, horizontal priority stacks, areas, pies/donuts, dual-axis risks, and multi-view design;
+- conclusion titles, typography, reading direction, direct labels, annotations, and page position;
+- Gestalt grouping, alignment, whitespace, borders, legends, gridlines, markers, and precision;
+- color semantics, ordered intensity, grayscale redundancy, accessibility, dark backgrounds;
+- the difference between decorative shadows, structural fills, data intervals, and context regions;
+- animation, category order, spaghetti-chart alternatives, common-scale small multiples, and audience acceptance.
 
 ## Gallery
 
-The gallery shows the range of final visuals the Skill can direct an agent to produce. Only the finished images are included—the Skill remains independent of any rendering stack.
+The repository intentionally contains finished original images only—no chart-specific datasets, rendering scripts, or software recipes.
 
 | KPI + sparkline | Ranked comparison |
 |---|---|
@@ -61,114 +129,6 @@ The gallery shows the range of final visuals the Skill can direct an agent to pr
 |---|---|
 | [![Support demand heatmap](examples/09-heatmap-support.png)](examples/09-heatmap-support.png) | [![Regional delivery trend](examples/04-highlighted-line-delivery.png)](examples/04-highlighted-line-delivery.png) |
 
-## Install
-
-### Skills CLI — recommended
-
-```bash
-npx skills add NINTING/craft-data-story-charts
-```
-
-The Skills CLI discovers `skills/craft-data-story-charts/SKILL.md` and installs it for a supported agent such as Codex, Claude Code, Cursor, GitHub Copilot, Gemini CLI, or Windsurf.
-
-### Manual Codex installation
-
-Copy `skills/craft-data-story-charts` into your personal Codex skills directory:
-
-```text
-~/.codex/skills/craft-data-story-charts/
-```
-
-On Windows this is normally:
-
-```text
-%USERPROFILE%\.codex\skills\craft-data-story-charts\
-```
-
-Restart or open a new agent session after installation so the skill metadata can be discovered.
-
-## Use
-
-Mention the skill explicitly when you want guaranteed activation:
-
-```text
-Use $craft-data-story-charts with revenue_bridge.csv.
-
-Audience: CFO.
-Decision: allocate next-quarter budget between acquisition and retention.
-Create one standalone executive chart with code, render PNG and SVG,
-and revise it until the Skill quality gate passes.
-```
-
-The Skill can also trigger automatically for requests such as:
-
-- “Turn this dataset into a decision-ready chart.”
-- “Improve this dashboard visual so the key result is obvious.”
-- “Create an executive data story from these monthly metrics.”
-- “Review this chart for clarity, hierarchy, accessibility, and integrity.”
-
-## Method
-
-### 1. Establish the communication contract
-
-Define the audience, decision, primary comparison, medium, and required context. The chart is designed for a specific use—not for “everyone.”
-
-### 2. Extract the result
-
-Analyze the data, then write a complete Big Idea:
-
-```text
-[Result or change], which matters because [business implication];
-therefore [decision or action when applicable].
-```
-
-### 3. Choose the display
-
-Choose by what the audience must compare:
-
-| Audience task | Preferred display |
-|---|---|
-| Remember one or two values | Large text |
-| Look up exact values | Table |
-| Compare categories or ranks | Bars or dots |
-| Show a time trend | Line |
-| Compare two states | Slope chart |
-| Show a relationship | Scatterplot |
-| Compare composition | Stacked bars |
-| Explain contributions | Waterfall |
-| Find a dense two-dimensional pattern | Heatmap |
-| Show forecast uncertainty | Interval or band |
-
-See [the complete chart-selection reference](skills/craft-data-story-charts/references/chart-selection.md).
-
-### 4. Compose and focus
-
-Use a conclusion title, a context subtitle, only the necessary evidence, direct labels, and restrained annotations. Neutralize context and reserve a deliberate accent for the primary evidence.
-
-### 5. Render and inspect
-
-When code is requested, the Skill requires a reproducible source file and an actual rendered artifact. The agent inspects the result at delivery size rather than approving code in the abstract.
-
-### 6. Pass the quality gate
-
-A chart passes only when:
-
-- it has no hard failure;
-- it scores at least **85/100**;
-- Purpose & story, comprehension, and integrity each score at least **15/20**;
-- the intended takeaway is the first visual stop;
-- a new reader can state the result without verbal coaching.
-
-The rubric scores:
-
-1. Purpose & story
-2. Comprehension
-3. Visual hierarchy & focus
-4. Aesthetics & accessibility
-5. Integrity & completeness
-
-See [the complete quality gate](skills/craft-data-story-charts/references/quality-gate.md).
-
 ## Repository structure
 
 ```text
@@ -177,28 +137,27 @@ craft-data-story-charts/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
 │   └── references/
+│       ├── end-to-end-method.md
 │       ├── chart-selection.md
-│       └── quality-gate.md
-├── examples/
-│   └── *.png
+│       ├── visual-language.md
+│       ├── story-delivery.md
+│       ├── quality-gate.md
+│       └── methodology-map.md
+├── examples/*.png
 ├── README.md
 ├── README.zh-CN.md
 ├── CONTRIBUTING.md
 └── LICENSE
 ```
 
-## Scope
+## Methodology and provenance
 
-This Skill focuses on converting an established data result into an effective explanatory display. It is intentionally independent of a rendering product and suitable for reports, executive slides, dashboards, web pages, and standalone coded charts.
+This is an independent open-source operationalization inspired primarily by Cole Nussbaumer Knaflic's *Storytelling with Data* and its Chinese edition, *用数据讲故事*. It is not affiliated with or endorsed by the author or publisher.
 
-## Contributing
+The [methodology map](skills/craft-data-story-charts/references/methodology-map.md) maps the ten chapters to the workflow and explicitly distinguishes book-derived ideas from AI-production extensions such as the named state object, rendered-output requirement, integrity checks, and numerical quality gate. No book scans or reproduced book illustrations are included.
 
-Issues and pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting.
+## Contributing and license
 
-## Acknowledgements
-
-The methodology is an independent open-source implementation inspired by audience-first explanatory visualization and data-storytelling practice, including the principles popularized by Cole Nussbaumer Knaflic's *Storytelling with Data*. This project is not affiliated with or endorsed by the author or publisher.
-
-## License
+Issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 [MIT](LICENSE) © 2026 NINTING

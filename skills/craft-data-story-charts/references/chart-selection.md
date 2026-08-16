@@ -1,83 +1,120 @@
 # Chart selection
 
-Choose a display by the audience's primary comparison task. A dataset can support several chart types; the intended judgment determines the correct one.
+Choose by the judgment the audience must make. A dataset does not own a chart type; the communication task selects the encoding.
 
 ## Selection matrix
 
-| Audience task | Preferred display | Design rules | Common failure |
+| Audience task | Preferred display | Core rule | Common failure |
 |---|---|---|---|
-| Remember one or two values | Large text with a short statement | Show unit, period, and comparison | Wrapping a single number in a decorative chart |
-| Look up exact values | Table | Align numbers, limit precision, highlight only important cells | Heavy cell borders and indiscriminate conditional color |
-| Find patterns while retaining values | Highlight table or heatmap | Use an ordered scale and label its meaning | Rainbow palette or ambiguous color midpoint |
-| Compare categories | Horizontal or vertical bars | Use a common zero baseline and meaningful order | Truncated baseline or arbitrary alphabetical order |
-| Rank many categories | Sorted horizontal bars or dot plot | Put labels beside marks; emphasize relevant ranks | Rotated labels and a remote legend |
-| Compare actual with target | Bars or dots with a reference marker | Label target and variance directly | Separate gauges that prevent comparison |
-| Show a time trend | Line chart | Keep time continuous; annotate events and endpoints | Markers and labels on every point |
-| Compare two states | Slope chart | Label both ends and emphasize direction | Too many crossing series |
-| Compare several time series | Highlighted line, small multiples, or heatmap | Focus one or a few; hold scales constant in small multiples | An undifferentiated spaghetti chart |
-| Show a relationship | Scatterplot | Label notable points; add reference line only when meaningful | Claiming causation from visual association |
-| Show a distribution | Histogram, box plot, strip plot, or interval plot | Explain unfamiliar summaries; show sample context | Using a bar chart for binned continuous data without clear bins |
-| Compare part-to-whole across groups | 100% stacked bars | Keep segment order and colors consistent; show sample size if relevant | Multiple pies that require angle comparison |
-| Show total and composition | Stacked bars | Put the segment of greatest comparative interest on a common baseline | Expecting precise comparison of all interior segments |
-| Show positive and negative composition | Diverging stacked bars | Use a meaningful center and label direction | Treating neutral responses as positive or negative without explanation |
-| Explain contributions from start to finish | Waterfall | Distinguish start, changes, and result; order contributions logically | Too many small steps or unclear subtotal behavior |
-| Explain a process or funnel | Ordered bars or stages | Preserve stage order and show conversion or loss explicitly | Decorative funnel area that distorts values |
-| Show geographic pattern | Map only when location is analytically relevant | Use a suitable rate or normalized metric; include non-map comparison when rank matters | Mapping raw totals driven by population size |
-| Show uncertainty | Interval, band, error bar, or fan chart | Name the interval and distinguish estimate from range | Showing a forecast as an equally certain continuation |
+| Remember one or two values | Large number plus a meaning sentence | Include unit, period, and comparison | Wrapping two numbers in a decorative chart |
+| Look up exact values or mixed units | Table | Align text left and numbers right/decimal; use sensible precision | Heavy boxes and undifferentiated cells |
+| Find high/low patterns while retaining values | Heatmap/highlight table | Use an ordered scale with a labeled direction | Rainbow scale or ambiguous midpoint |
+| See the relationship between two variables | Scatterplot | Label notable points; add a benchmark only when it answers a question | Claiming causation from association |
+| Follow continuous change over time | Line chart | Preserve truthful time intervals and distinguish actual from forecast | Connecting unordered categories or labeling every point |
+| Compare two states | Slope chart | Label both ends; emphasize direction and important changes | Too many crossing lines or losing category order |
+| Compare category magnitude | Horizontal or vertical bars | Use a zero baseline and meaningful order | Truncated baseline or arbitrary alphabetical order |
+| Show total and composition | Stacked bars | Put the most important segment on a common baseline | Expecting precise comparison of every interior segment |
+| Compare relative composition across groups | 100% stacked bars | Keep segment order stable and supply totals if absolute scale matters | Treating 100% as equal sample size |
+| Show positive, neutral, and negative composition | Diverging stacked bars | Define the center and explain the neutral treatment | Hiding neutral or making middle segments look precisely comparable |
+| Explain contributions from start to finish | Waterfall | Distinguish start, changes, subtotals, and result | Too many small steps or unclear sign behavior |
+| Rank many categories with long labels | Sorted horizontal bars | Put labels before marks and strongest priority near the top | Remote legend and arbitrary order |
+| Show several time series | Highlighted line or common-scale small multiples | Highlight one for live narration; separate for full context | Undifferentiated spaghetti chart |
+| Show a distribution | Histogram, box, strip, or interval plot | Explain unfamiliar summaries and sample context | Using category bars for continuous bins without explanation |
+| Show geographic pattern | Map only when location matters | Normalize rates and add non-map comparison when rank matters | Mapping raw totals driven by population |
+| Show forecast or uncertainty | Interval/band, error bars, fan, or annotated forecast line | Name the interval; separate estimate, range, actual, and forecast | Drawing a forecast as an equally certain continuation |
 
-## Encoding priority
+## Simple text, tables, and heatmaps
 
-When several encodings can express the same comparison, prefer:
+Use simple text when one or two values carry the message. Pair the value with why it matters; keep the absolute context when a relative change alone could mislead.
 
-1. position on a common scale;
-2. position on separate but aligned scales;
-3. length;
-4. direction or slope;
-5. angle;
-6. area;
-7. volume;
-8. color saturation.
+Use a table when readers must find particular values, compare mixed units, or choose their own focus. In live presentation, a dense table competes with the speaker; move full lookup detail to an appendix when possible.
 
-This is a preference, not a ban. Depart when the business meaning or medium makes another encoding substantially clearer.
+Use a heatmap when the table's pattern matters. Keep numbers when exact lookup still matters, remove heavy borders, use an ordered scale, and label low-to-high meaning.
 
-## Form-specific rules
+## Scatterplots
 
-### Bars
+Use for paired observations and relationship shape. Add a mean, target, or threshold only when it turns the plot into a relevant judgment. Label notable points and preserve the full relationship context. Association is not causation.
 
-- Start the quantitative baseline at zero because bar length encodes value.
-- Sort by value for ranking, by time for chronology, or by business order for a process.
+## Lines and annotated forecasts
+
+Use a line only for continuous or ordered sequences. Plot actual time intervals truthfully. A nonzero vertical range can be valid for small changes, but disclose the scale and avoid dramatic framing.
+
+Direct-label line ends. Reduce markers and data labels unless they support an event, endpoint, calculation, or story turn.
+
+For forecast:
+
+- use a boundary between actual and forecast;
+- change line style and/or use a light region;
+- name any prediction or confidence interval;
+- label assumptions or source in a subordinate note;
+- never let estimated future values look identical to observed facts.
+
+## Slope charts
+
+Use for two time points or states when direction and magnitude of change matter. Label both ends and use a common scale. Highlight one important category when crossings become dense. Avoid when the audience must preserve a fixed category sequence that crossings destroy.
+
+## Bars
+
+- Start at zero because bar length encodes value.
+- Sort by natural sequence, business process, message-relevant order, or value; record the reason.
 - Prefer horizontal bars for long labels or many categories.
-- Make bars wider than the gaps between them unless a special grouping requires otherwise.
+- Keep bars wider than gaps unless grouping requires otherwise.
+- Choose either a readable axis or direct values; avoid redundant precision.
 
-### Lines
+## Stacked bars
 
-- Use for continuous sequences, especially time.
-- A nonzero vertical range may be valid when small changes matter, but show the scale clearly and avoid dramatic framing.
-- Direct-label line ends where possible.
-- Distinguish forecast from actual with line style, shading, or a clearly marked boundary.
+Use when both total and composition matter. Only segments that share a baseline support precise comparison. Put the segment of greatest comparative interest on the baseline or choose another display.
 
-### Stacks
+Use 100% stacks for relative composition. Label or accompany totals if sample size or absolute volume changes the decision.
 
-- Use when part-to-whole meaning matters.
-- Only the segments sharing a baseline support precise comparison. Place the segment of greatest interest on that baseline or choose another chart.
-- Use 100% stacks for composition only; provide totals separately if absolute scale matters.
+### Positive/negative diverging stacks
 
-### Pies and donuts
+Use when responses or components have meaningful negative and positive directions around a center.
 
-- Use only for a small number of segments forming a meaningful whole when the conclusion is coarse, such as one segment being clearly dominant.
-- Do not use for precise comparisons, many segments, comparisons across several groups, or values that do not sum to a meaningful whole.
-- Never use 3D or exploded slices.
+1. Keep a visible zero or conceptual center.
+2. Order segments consistently from negative through neutral to positive.
+3. Decide and explain whether neutral is centered, split, shown to one side, or displayed separately.
+4. Use position/direction plus labels; do not rely on red/green alone.
+5. Direct-label the conclusion or important group difference.
+6. Do not demand exact comparison of floating interior segments. Use aligned bars or a table when precise category comparison is the task.
 
-### Tables
+### Positive/negative contribution stacks
 
-- Use when exact lookup is more important than pattern recognition.
-- Align text left and numbers right or by decimal point.
-- Use sensible precision and place units in headers instead of repeating them in every cell.
-- Use whitespace and light rules instead of boxing every cell.
+For growth, loss, current base, inflow, outflow, and unmet need, keep zero visible and stack in business-semantic order. A gap encoded as outline or whitespace must have an explicit label. Negative direction must represent a real negative quantity, not a decorative mirror.
+
+## Waterfalls
+
+Use for start → increases/decreases → finish. Preserve signs, label the result, and make subtotal behavior clear. Order changes by business sequence or explanatory logic, not by arbitrary color.
+
+## Horizontal priority stacks
+
+Use when many long category labels have ordered sub-ranks such as first/second/third priority. Sort rows by total priority or an explicit business order. Use one hue with ordered lightness for rank when appropriate, and directly label totals or segments needed for interpretation.
+
+## Area and size encodings
+
+Area is less precise than length. Use it only for rough magnitude, part-to-whole emphasis, or very large order-of-magnitude differences. Never use decorative 3D volume for quantitative comparison.
+
+## Pies and donuts
+
+Do not use them as a default. They require angle, area, or arc comparison and become especially weak across several groups.
+
+Choose the alternative by task:
+
+- one dominant result → direct number;
+- category comparison → bars;
+- overall composition across groups → 100% stacked bars;
+- before/after direction → slope chart.
+
+If a pie is retained for a small, unmistakable whole, keep few slices, label directly, avoid 3D/explosion, and do not ask for precise cross-pie comparison. Avoid donuts for quantitative arc-length comparison.
+
+## Dual axes
+
+Avoid dual y axes because readers must map each series to a different scale and a shared x axis can manufacture a relationship. Prefer direct labels, indexed series on one comparable scale, or vertically separated charts with a shared x axis.
 
 ## Multi-view displays
 
 - Give each view one job and one conclusion title.
-- Use consistent scales, order, naming, and semantic colors across views.
+- Keep scales, order, naming, and semantic color consistent.
 - Arrange views in the order the audience should reason through them.
+- For small multiples, share the scale required for comparison.
 - Do not repeat the same evidence in a chart and table unless exact lookup is a genuine secondary need.

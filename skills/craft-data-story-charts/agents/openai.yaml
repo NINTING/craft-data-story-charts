@@ -1,4 +1,4 @@
 interface:
   display_name: "Data Story Charts"
-  short_description: "Turn business data into clear, elegant, actionable charts"
-  default_prompt: "Use $craft-data-story-charts to turn this dataset into a clear, elegant, actionable chart."
+  short_description: "Turn a data finding into an audience-ready visual story"
+  default_prompt: "Use $craft-data-story-charts to carry this finding through the complete audience, evidence, visual, attention, story, rendering, and comprehension process."
