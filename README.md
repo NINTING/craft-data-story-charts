@@ -12,7 +12,7 @@
 
 </div>
 
-![Highlighted operations trend showing a decision-ready data story](examples/04-highlighted-line-delivery.png)
+![Complete data-story workflow with an upstream feedback loop](examples/28-complete-workflow-feedback-loop.png)
 
 ## One transformation, not a chart cookbook
 
@@ -107,27 +107,75 @@ The references cover:
 
 ## Gallery
 
-The repository intentionally contains finished original images only—no chart-specific datasets, rendering scripts, or software recipes.
+The gallery was regenerated for v2 from original synthetic data. It contains 30 finished PNGs covering the method as a system—not only a list of chart types. No chart-specific datasets, rendering scripts, or software recipes are shipped in the public repository.
 
-| KPI + sparkline | Ranked comparison |
-|---|---|
-| [![Retention KPI](examples/01-kpi-retention.png)](examples/01-kpi-retention.png) | [![Ranked CAC bars](examples/02-ranked-bars-cac.png)](examples/02-ranked-bars-cac.png) |
+### Context and complete workflow
 
-| Target comparison | Forecast + uncertainty |
+| Data Story Brief | Complete feedback loop |
 |---|---|
-| [![Manufacturing target dot plot](examples/03-target-dotplot-defects.png)](examples/03-target-dotplot-defects.png) | [![Capacity forecast](examples/10-forecast-capacity.png)](examples/10-forecast-capacity.png) |
+| [![Audience-first Data Story Brief](examples/01-context-data-story-brief.png)](examples/01-context-data-story-brief.png) | [![Complete upstream workflow](examples/28-complete-workflow-feedback-loop.png)](examples/28-complete-workflow-feedback-loop.png) |
 
-| Before / after slope | Diverging composition |
-|---|---|
-| [![Onboarding slope chart](examples/05-slope-onboarding.png)](examples/05-slope-onboarding.png) | [![Employee satisfaction composition](examples/06-diverging-satisfaction.png)](examples/06-diverging-satisfaction.png) |
+### Choose the display from the audience's task
 
-| Waterfall contribution | Relationship + exception |
+| Simple text | Exact-value table |
 |---|---|
-| [![ARR waterfall](examples/07-waterfall-arr.png)](examples/07-waterfall-arr.png) | [![Store exception scatterplot](examples/08-scatter-stores.png)](examples/08-scatter-stores.png) |
+| [![Simple KPI text](examples/02-simple-text-kpi.png)](examples/02-simple-text-kpi.png) | [![Lookup table](examples/03-lookup-table.png)](examples/03-lookup-table.png) |
 
-| Dense-pattern heatmap | Highlighted time trend |
+| Highlight table / heatmap | Scatter relationship |
 |---|---|
-| [![Support demand heatmap](examples/09-heatmap-support.png)](examples/09-heatmap-support.png) | [![Regional delivery trend](examples/04-highlighted-line-delivery.png)](examples/04-highlighted-line-delivery.png) |
+| [![Highlight table heatmap](examples/04-highlight-table-heatmap.png)](examples/04-highlight-table-heatmap.png) | [![Scatter relationship](examples/05-scatter-relationship.png)](examples/05-scatter-relationship.png) |
+
+| Highlighted time trend | Forecast interval |
+|---|---|
+| [![Highlighted line trend](examples/06-highlighted-line-trend.png)](examples/06-highlighted-line-trend.png) | [![Forecast interval](examples/07-forecast-interval.png)](examples/07-forecast-interval.png) |
+
+| Before / after slope | Ranked bars |
+|---|---|
+| [![Slope chart](examples/08-slope-before-after.png)](examples/08-slope-before-after.png) | [![Ranked horizontal bars](examples/09-ranked-horizontal-bars.png)](examples/09-ranked-horizontal-bars.png) |
+
+| Total + composition | Relative composition |
+|---|---|
+| [![Stacked total and composition](examples/10-stacked-total-composition.png)](examples/10-stacked-total-composition.png) | [![One-hundred-percent composition](examples/11-100pct-composition.png)](examples/11-100pct-composition.png) |
+
+| Diverging sentiment | Positive / negative contribution |
+|---|---|
+| [![Diverging sentiment](examples/12-diverging-sentiment.png)](examples/12-diverging-sentiment.png) | [![Positive and negative contribution](examples/13-positive-negative-contribution.png)](examples/13-positive-negative-contribution.png) |
+
+| Waterfall | Priority stack |
+|---|---|
+| [![Waterfall contribution](examples/14-waterfall-contribution.png)](examples/14-waterfall-contribution.png) | [![Horizontal priority stack](examples/15-horizontal-priority-stack.png)](examples/15-horizontal-priority-stack.png) |
+
+| Distribution / interval | Pie alternatives by task |
+|---|---|
+| [![Distribution interval](examples/16-distribution-interval.png)](examples/16-distribution-interval.png) | [![Pie alternatives](examples/17-pie-alternatives-by-task.png)](examples/17-pie-alternatives-by-task.png) |
+
+| Dual-axis alternative | Geography + precise rank |
+|---|---|
+| [![Dual-axis alternative](examples/18-dual-axis-alternative.png)](examples/18-dual-axis-alternative.png) | [![Map plus normalized comparison](examples/29-map-plus-normalized-comparison.png)](examples/29-map-plus-normalized-comparison.png) |
+
+| Area for magnitude | Line for precise change |
+|---|---|
+| [![Area and line chosen by task](examples/30-area-versus-line-task.png)](examples/30-area-versus-line-task.png) | [![Text and reading path](examples/21-text-reading-path.png)](examples/21-text-reading-path.png) |
+
+### Reduce friction and direct attention
+
+| Declutter before / after | Attention hierarchy |
+|---|---|
+| [![Declutter transformation](examples/19-declutter-before-after.png)](examples/19-declutter-before-after.png) | [![Attention hierarchy](examples/20-attention-hierarchy.png)](examples/20-attention-hierarchy.png) |
+
+| Fill and shading semantics | Dense series to small multiples |
+|---|---|
+| [![Fill and shading semantics](examples/22-fill-shading-semantics.png)](examples/22-fill-shading-semantics.png) | [![Small multiples](examples/23-spaghetti-to-small-multiples.png)](examples/23-spaghetti-to-small-multiples.png) |
+
+| Dark-background adaptation | Redundant accessible encoding |
+|---|---|
+| [![Dark background](examples/26-dark-background.png)](examples/26-dark-background.png) | [![Accessible encoding](examples/27-accessible-redundant-encoding.png)](examples/27-accessible-redundant-encoding.png) |
+
+### Story and delivery
+
+| Beginning → middle → end | Live vs self-contained |
+|---|---|
+| [![Beginning middle end](examples/24-beginning-middle-end.png)](examples/24-beginning-middle-end.png) | [![Live versus written delivery](examples/25-live-vs-self-contained.png)](examples/25-live-vs-self-contained.png) |
 
 ## Repository structure
 

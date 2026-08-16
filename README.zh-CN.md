@@ -12,7 +12,7 @@
 
 </div>
 
-![突出关键趋势、能够独立支持决策的数据故事图](examples/04-highlighted-line-delivery.png)
+![带有上游反馈回路的完整数据故事流程](examples/28-complete-workflow-feedback-loop.png)
 
 ## 它是一套完整转换，不是图表工具箱
 
@@ -107,27 +107,75 @@ Windows 通常对应 `%USERPROFILE%\.codex\skills\craft-data-story-charts\`。
 
 ## 示例画廊
 
-仓库刻意只放原创的最终图片，不附加特定图表的数据集、渲染脚本或软件复现教程。
+v2 画廊已经基于原创合成数据重新生成，共 30 张最终 PNG。它展示的是完整方法论，而不只是图表类型列表。公开仓库不附带特定示例的数据集、渲染脚本或软件复现教程。
 
-| KPI 与趋势线 | 排名比较 |
-|---|---|
-| [![留存率 KPI](examples/01-kpi-retention.png)](examples/01-kpi-retention.png) | [![获客成本排名](examples/02-ranked-bars-cac.png)](examples/02-ranked-bars-cac.png) |
+### 上下文与完整流程
 
-| 目标比较 | 预测与不确定区间 |
+| Data Story Brief | 完整反馈回路 |
 |---|---|
-| [![制造质量目标点图](examples/03-target-dotplot-defects.png)](examples/03-target-dotplot-defects.png) | [![容量预测](examples/10-forecast-capacity.png)](examples/10-forecast-capacity.png) |
+| [![受众优先的 Data Story Brief](examples/01-context-data-story-brief.png)](examples/01-context-data-story-brief.png) | [![完整上游流程](examples/28-complete-workflow-feedback-loop.png)](examples/28-complete-workflow-feedback-loop.png) |
 
-| 前后变化 | 发散构成 |
-|---|---|
-| [![Onboarding 斜率图](examples/05-slope-onboarding.png)](examples/05-slope-onboarding.png) | [![员工满意度构成](examples/06-diverging-satisfaction.png)](examples/06-diverging-satisfaction.png) |
+### 根据受众任务选择展示形式
 
-| 贡献变化 | 关系与异常点 |
+| 简单文本 | 精确值表格 |
 |---|---|
-| [![ARR 瀑布图](examples/07-waterfall-arr.png)](examples/07-waterfall-arr.png) | [![门店异常散点图](examples/08-scatter-stores.png)](examples/08-scatter-stores.png) |
+| [![简单 KPI 文本](examples/02-simple-text-kpi.png)](examples/02-simple-text-kpi.png) | [![查询表格](examples/03-lookup-table.png)](examples/03-lookup-table.png) |
 
-| 密集模式 | 突出式时间趋势 |
+| 突出表格 / 热力图 | 散点关系 |
 |---|---|
-| [![客服需求热力图](examples/09-heatmap-support.png)](examples/09-heatmap-support.png) | [![区域配送趋势](examples/04-highlighted-line-delivery.png)](examples/04-highlighted-line-delivery.png) |
+| [![突出表格热力图](examples/04-highlight-table-heatmap.png)](examples/04-highlight-table-heatmap.png) | [![散点关系](examples/05-scatter-relationship.png)](examples/05-scatter-relationship.png) |
+
+| 突出式时间趋势 | 预测区间 |
+|---|---|
+| [![突出式折线趋势](examples/06-highlighted-line-trend.png)](examples/06-highlighted-line-trend.png) | [![预测区间](examples/07-forecast-interval.png)](examples/07-forecast-interval.png) |
+
+| 前后斜率 | 排名条形图 |
+|---|---|
+| [![斜率图](examples/08-slope-before-after.png)](examples/08-slope-before-after.png) | [![横向排名条形图](examples/09-ranked-horizontal-bars.png)](examples/09-ranked-horizontal-bars.png) |
+
+| 总量与构成 | 相对构成 |
+|---|---|
+| [![总量与构成堆叠图](examples/10-stacked-total-composition.png)](examples/10-stacked-total-composition.png) | [![百分比构成](examples/11-100pct-composition.png)](examples/11-100pct-composition.png) |
+
+| 发散情感构成 | 正负贡献 |
+|---|---|
+| [![发散情感构成](examples/12-diverging-sentiment.png)](examples/12-diverging-sentiment.png) | [![正负贡献](examples/13-positive-negative-contribution.png)](examples/13-positive-negative-contribution.png) |
+
+| 瀑布图 | 优先级堆叠 |
+|---|---|
+| [![瀑布贡献图](examples/14-waterfall-contribution.png)](examples/14-waterfall-contribution.png) | [![横向优先级堆叠](examples/15-horizontal-priority-stack.png)](examples/15-horizontal-priority-stack.png) |
+
+| 分布与区间 | 按任务替代饼图 |
+|---|---|
+| [![分布区间](examples/16-distribution-interval.png)](examples/16-distribution-interval.png) | [![饼图替代方案](examples/17-pie-alternatives-by-task.png)](examples/17-pie-alternatives-by-task.png) |
+
+| 双轴替代方案 | 地理与精确排名 |
+|---|---|
+| [![双轴替代方案](examples/18-dual-axis-alternative.png)](examples/18-dual-axis-alternative.png) | [![地图与标准化比较](examples/29-map-plus-normalized-comparison.png)](examples/29-map-plus-normalized-comparison.png) |
+
+| 面积表达量级 | 折线表达精确变化 |
+|---|---|
+| [![按任务选择面积或折线](examples/30-area-versus-line-task.png)](examples/30-area-versus-line-task.png) | [![文字与阅读路径](examples/21-text-reading-path.png)](examples/21-text-reading-path.png) |
+
+### 降低负荷并引导注意力
+
+| 去杂乱前后 | 注意力层级 |
+|---|---|
+| [![去杂乱转换](examples/19-declutter-before-after.png)](examples/19-declutter-before-after.png) | [![注意力层级](examples/20-attention-hierarchy.png)](examples/20-attention-hierarchy.png) |
+
+| 填充与阴影语义 | 密集折线转小多图 |
+|---|---|
+| [![填充与阴影语义](examples/22-fill-shading-semantics.png)](examples/22-fill-shading-semantics.png) | [![共用尺度小多图](examples/23-spaghetti-to-small-multiples.png)](examples/23-spaghetti-to-small-multiples.png) |
+
+| 深色背景适配 | 冗余无障碍编码 |
+|---|---|
+| [![深色背景](examples/26-dark-background.png)](examples/26-dark-background.png) | [![无障碍冗余编码](examples/27-accessible-redundant-encoding.png)](examples/27-accessible-redundant-encoding.png) |
+
+### 故事与交付
+
+| 开端 → 发展 → 结尾 | 现场讲述与独立阅读 |
+|---|---|
+| [![开端发展结尾](examples/24-beginning-middle-end.png)](examples/24-beginning-middle-end.png) | [![现场与书面交付](examples/25-live-vs-self-contained.png)](examples/25-live-vs-self-contained.png) |
 
 ## 仓库结构
 
